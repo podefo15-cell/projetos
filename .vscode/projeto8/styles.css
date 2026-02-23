@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(205, 245, 252);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.363);
+    font-family: 'Protest Guerrilla', cursive;
+    padding: 2%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: aparecendo 1s;
+}
+
+.logo {
+    font-family: 'Protest Guerrilla', cursive;
+    color: white;
+    flex-wrap: wrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+span {
+    color: #c41818;
+}
+
+
+.butão1 {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.butão1:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.butão1:active {
+    transform: scale(0.95);
+    transition: 0.3s;
+}
+
+.butão2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Protest Guerrilla', cursive;
+    font-size: 25px;
+    color: white;
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.butão2:hover {
+    filter: drop-shadow(0px 0px 2px)
+}
+
+img {
+    width: 100px;
+}
+
+
+@keyframes aparecendo {
+    0% {
+        filter: brightness(0);
+        transform: translate(-20px);
+    }
+
+    50% {
+        filter: drop-shadow(0px 0px 10px white);
+    }
+}
+
+@keyframes aparecendo2 {
+    0% {
+        filter:opacity(0);
+        transform: translate(0px, 60px);
+        scale: 0.8;
+
+    }
+}
+
+.explicacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 40px;
+    gap: 40px;
+}
+
+section {
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    padding: 5%;
+    width: auto;
+    border-radius: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0px 5px 10px;
+    animation: aparecendo2 2s;
+}
+
+li {
+    list-style: none;
+}
+
+
+footer p {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    color: gray;
+}

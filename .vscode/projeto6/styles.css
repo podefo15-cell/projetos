@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/academia.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body::before {
+    content: "";
+    min-height: 100vh;
+    background-image: url(img/academia.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(9px);
+    /* --- AS LINHAS QUE FALTARAM --- */
+    position: fixed;
+    /* "Pregue" o fundo na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ocupe 100% da largura */
+    height: 100%;
+    /* Ocupe 100% da altura */
+    z-index: -1;
+    /* Jogue para trás do texto */
+}
+
+header {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    justify-content:flex-start;
+    padding: 2%;
+}
+
+.li {
+    list-style: none;
+    display: inline-flex;
+    align-items: flex-end;
+    padding: 20px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    text-decoration: none;
+    gap: 20px;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.suplemento,
+.suplemento2,
+.suplemento3 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    width: auto;
+    color: white;
+}
+
+.suplementos {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    animation: aparecendo 2s ease;
+}
+
+.imagens {
+    width: 190px;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+    margin: 1%;
+    text-shadow: 0px 0px 10px;
+}
+
+/*6vH5ZtTa1JzH*/
+
+strong {
+    color: red;
+    font-size: 30px;
+}
+
+.textos {
+    font-size: 13px;
+}
+
+button {
+    padding: 2%;
+    display: flex;
+    transform: translate(40px);
+    margin: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 255, 106);
+    color: white;
+    transition: 2s ease;
+    animation: brilho 4s alternate infinite;
+}
+
+
+button:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(0, 187, 0);
+    scale: 0.1;
+
+}
+
+@keyframes brilho {
+    0% {
+        box-shadow: 0px 0px 10px rgba(1, 182, 1, 0.705)
+    }
+
+    100% {
+        box-shadow: 0px 0px 20px rgb(0, 255, 0)
+    }
+}
+
+@keyframes aparecendo {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+
+}

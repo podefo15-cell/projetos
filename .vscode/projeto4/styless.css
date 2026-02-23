@@ -1,0 +1,114 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family:'Courier New', Courier, monospace
+}
+
+
+.registro {
+    cursor: pointer;
+    border-radius: 9%;
+    border-color: rgb(132, 0, 255);
+    color: rgb(132, 0, 255);
+    width: 90px;
+    height: 30px;
+    background-color: rgba(1, 255, 255, 0);
+    border-radius: 20px;
+    transition: 0.5s;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.registro:hover {
+    background-color: rgb(192, 124, 255);
+    transform: translateY(1.2px);
+    transition: 0.5;
+    animation: pulse 1s alternate infinite;
+}
+
+.registro:active {
+    transform: scale(0.1);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    animation: subindo 2s
+}
+
+input {
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    cursor: text;
+    background-color: rgba(0, 0, 0, 0.007);
+    transition: 0.5s;
+    border-color: blueviolet;
+    animation: aparecendo 2s;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input:hover {
+    background-color: rgba(132, 0, 255, 0.219);
+    transform: scale(1.1);
+    padding: 9px;
+    box-shadow: 0 0 10px rgb(171, 88, 255);
+    transition: 0.5s;
+
+}
+
+input:focus {
+    background-color: rgb(255, 255, 255);
+}
+
+
+h1 {
+    color: white;
+    text-shadow: 0 0 10px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.0);
+        box-shadow: 0 0 10px
+    }
+
+
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px
+    }
+}
+
+@keyframes subindo {
+    0% {
+        transform: translate(0px, 250px);
+        opacity: 0%;
+    }
+}
+
+@keyframes aparecendo {
+    0% {
+        transform: scale(0.9);
+    }
+
+}

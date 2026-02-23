@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #041532;
+  color: white;
+}
+
+/* cabeçalho */
+.molestador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+span {
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  padding: 0 8px;
+}
+
+h1,
+h2 {
+  color: white;
+}
+
+h2 {
+  background-color: red;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgb(253, 0, 0);
+  padding: 8px 16px;
+}
+
+/* container dos cards */
+.molestados {
+  display: flex;
+  flex-wrap: wrap;              /* quebra linha em telas menores */
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px 0;
+}
+
+/* CARD BÁSICO (vale pros 3) */
+.card {
+  width: 260px;
+  background-color: #1d2f5a;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  padding: 25px 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* corrigido */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+/* esconder o checkbox (aquele quadradinho branco) */
+.card-toggle {
+  display: none;
+}
+
+/* título + imagem de cima (sempre visíveis) */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer; /* card clicável */
+}
+
+.card-header h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.card-header img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* conteúdo que começa escondido */
+.card-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  color: #e4e7ff;       /* levemente mais claro pra ler melhor */
+}
+
+/* imagem de "depois" dentro do conteúdo */
+.card-content img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto 0;
+}
+
+/* quando clica no card (checkbox marcado) → abre o conteúdo */
+.card-toggle:checked ~ .card-content {
+  max-height: 10100px; /* altura suficiente pra mostrar o texto + imagem */
+}
