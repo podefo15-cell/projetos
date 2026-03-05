@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(205, 245, 252);
+}
+
+header {
+    font-family: 'Protest Guerrilla', cursive;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.521);
+    gap: 20px;
+}
+
+
+img {
+    width: 150px;
+    height: 200px;
+    background-color: rgb(216, 216, 216);
+    border-radius: 10px;
+}
+
+.butão2,
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: auto;
+    font-size: 25px;
+    background: none;
+    color: white;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+.butão1 {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+}
+
+.butão1:hover {
+    scale: 1.1;
+}
+
+.butão1:active {
+    scale: 1.0;
+    text-shadow: 0px 0px 10px white;
+}
+
+.butão2:hover {
+    scale: 1.1;
+    filter: drop-shadow(0px 0px 5px white);
+}
+
+.butão2:active {
+    scale: 1.0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+span {
+    color: #c41818;
+}
+
+.cartão,
+.cartão2,
+.cartão3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: white;
+    background-size: auto;
+}
+
+.cartão3 img {
+    width: 100px;
+}
+
+.cartões {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cartão nav ul li {
+    list-style: none;
+}
+
+big,
+u {
+    color: rgb(194, 17, 17);
+}
+
+/*<b></b> - Negrito
+<strong></strong> - Negrito (enfâse)
+<i></i> - Italico
+<u></u> - sublinhado
+<hr> - Linha de divisao
+<br> - Pular uma linha (quebra de linha)
+<small></small> - texto pequeno
+<del></del> - Riscado (deletado)
+<sup></sup> - Superior (ex: numero exponencial)
+<sub></sub> - Inferior
+<mark></mark> - Marcação (destaca texto)*
