@@ -26,6 +26,10 @@ img {
     border-radius: 10px;
 }
 
+.azul {
+    color: rgb(95, 4, 24)
+}
+
 .butão2,
 .logo {
     display: flex;
@@ -76,6 +80,7 @@ img {
     background-color: rgb(135, 201, 70);
     border-radius: 10px;
     transition: 0.1s;
+    font-size: 20px;
 }
 
 .compra:hover {
@@ -93,6 +98,7 @@ header nav ul {
     list-style: none;
     flex-wrap: wrap;
     gap: 20px;
+    animation: aparecendo2 1s;
 }
 
 span {
@@ -111,6 +117,7 @@ span {
     border-radius: 20px;
     background-color: white;
     background-size: auto;
+    animation: aparecendo 2s;
 }
 
 .cartão3 img {
@@ -119,18 +126,37 @@ span {
 
 .cartões {
     display: flex;
+    justify-content: center;
     padding: 20px;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.cartão nav ul li {
+.cartão,
+.cartão2,
+nav ul li {
     list-style: none;
 }
 
-big,
-u {
+big {
     color: rgb(194, 17, 17);
+}
+
+.precos {
+    color: green;
+}
+
+@keyframes aparecendo {
+    0% {
+        filter: opacity(0);
+        transform: translate(0px, 10px);
+    }
+}
+
+@keyframes aparecendo2 {
+    0% {
+        filter: opacity(0);
+    }
 }
 
 /*<b></b> - Negrito
